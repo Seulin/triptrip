@@ -51,6 +51,34 @@ const router = createRouter({
       name: "plan",
       component: () => import("../views/PlanView.vue"),
     },
+    {
+      path: "/review",
+      name: "review",
+      component: () => import("../views/ReviewView.vue"),
+      redirect: { name: "review-list" },
+      children: [
+        {
+          path: "list",
+          name: "review-list",
+          component: () => import("@/components/review/ReviewList.vue"),
+        },
+        {
+          path: "detail/:reviewId",
+          name: "review-detail",
+          component: () => import("@/components/review/ReviewDetail.vue"),
+        },
+        {
+          path: "write/:reviewId",
+          name: "review-write",
+          component: () => import("@/components/review/ReviewWrite.vue"),
+        },
+        // {
+        //   path: "modify/:reviewId",
+        //   name: "review-modify",
+        //   component: () => import("@/components/review/ReviewWrite.vue"),
+        // },
+      ]
+    },
   ]
 });
 

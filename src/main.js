@@ -8,6 +8,8 @@ import Antd from 'ant-design-vue';
 import App from "./App.vue";
 import router from "./router";
 
+import '@mdi/font/css/materialdesignicons.css';
+import "@vueup/vue-quill/dist/vue-quill.core.css";
 import 'ant-design-vue/dist/reset.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
